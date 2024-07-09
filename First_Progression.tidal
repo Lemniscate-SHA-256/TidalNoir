@@ -1,0 +1,21 @@
+-- Set tempo and swing
+setcps (120/60)  -- 60 BPM
+d1 $ s "feel swing" -- Apply swing feel
+
+-- Bass Line
+d1 $ n "c3 e3 g3 b2" # s "bass" # gain 0.8
+
+-- Piano Chords
+d2 $ n "<(c4 e4 g4) (a3 c4 e4)> <(f4 a4 c5) (g3 b3 d4)>" # s "superpiano" # gain 0.7 # legato 2
+
+-- Saxophone Melody
+d3 $ n "e5 f#5 g5 b5" # s "sax" # gain 0.6 # legato 1.5
+
+-- Drum Pattern
+d4 $ s "bd bd ~ bd" # gain 0.6
+d5 $ s "~ hh*2" # gain 0.4
+d6 $ s "~ sn" # gain 0.5 # legato 0.5
+
+-- Adding Reverb and Delay for Atmosphere
+d7 $ s "bass superpiano sax" # reverb 0.7 # room 0.8
+d8 $ s "bass superpiano sax" # delay 0.5 # delaytime 0.25
